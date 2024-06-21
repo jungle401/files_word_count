@@ -6,7 +6,7 @@
 #include <sys/shm.h>
 #include <sys/wait.h>
 #include <unistd.h>
-#include <semaphore.h>
+// #include <semaphore.h>
 #include <fcntl.h>
 #include <unordered_map>
 #include <vector>
@@ -14,7 +14,6 @@
 #include <algorithm>
 
 #define SHM_SIZE 65536
-const char* SEM_NAME = "/mysem";
 
 using namespace std;
 
@@ -25,7 +24,7 @@ vector<string> files =
     "../essay/e3.txt",
   };
 
-void child_process(int child_id, key_t key, int shmid, sem_t* sem) {
+void child_process(int child_id, int shmid) {
   auto word_count = unordered_map<string, int>();
   auto fin = ifstream(files[child_id]);
   auto str = string();
@@ -36,7 +35,6 @@ void child_process(int child_id, key_t key, int shmid, sem_t* sem) {
   // write into the shared memory
   // Attach, to get the pointer to the address of the shared memory.
 
-  sem_wait(sem);
   char* shared_memory = (char*)shmat(shmid, NULL, 0);
   if (shared_memory == (char*)(-1)) {
     perror("shmat");
@@ -44,11 +42,11 @@ void child_process(int child_id, key_t key, int shmid, sem_t* sem) {
   }
 
   // format: [string_size string occ]
-  char* ptr = shared_memory + sizeof(int) + *(int*)shared_memory;
+  char* ptr = shared_memory;
   for (auto& [word, count] : word_count) {
     // see if the next word exceeds the effective memory
     if (ptr + sizeof(word) + sizeof(int) * 2 >= shared_memory + SHM_SIZE) {
-      perror("shm space limit exceeds");
+      perror("shm space limit exceeds\n");
       exit(-1);
     }
     int word_len = word.size();
@@ -60,9 +58,6 @@ void child_process(int child_id, key_t key, int shmid, sem_t* sem) {
     ptr += sizeof(int);
   }
   *ptr = '\0';
-  *(int*)shared_memory = (ptr - shared_memory - sizeof(int));
-  sem_post(sem);
-
   shmdt(shared_memory);
 }
 
@@ -71,27 +66,25 @@ int main() {
   // Child Processes
   auto num_children = 3;
 
-  // Shared Memory
-  key_t key = ftok("shmfile", 65);
-  int shmid = shmget(key, SHM_SIZE, 0666 | IPC_CREAT);
-  if (shmid == -1) {
-    perror("shmget");
-    exit(EXIT_FAILURE);
-  }
-
-  // Semaphore
-  sem_t *sem = sem_open(SEM_NAME, O_CREAT, 0666, 1);
-  if (sem == SEM_FAILED) {
-    perror("sem_open");
-    exit(EXIT_FAILURE);
+  // Shared Memory for each sub-processes
+  auto shmids = vector<int>(num_children);
+  for (int i = 0; i < num_children; i++) {
+    shmids[i] = shmget(i, SHM_SIZE, 0666 | IPC_CREAT);
+    if (shmids[i] == -1) {
+      perror("shmget");
+      exit(EXIT_FAILURE);
+    }
   }
 
   for (int i = 0; i < num_children; i++) {
     pid_t pid = fork();
     if (pid == 0) {
       // child process
-      child_process(i, key, shmid, sem);
+      child_process(i, shmids[i]);
       exit(0);
+    } else if (pid < 0) {
+      perror("fork()");
+      abort();
     }
   }
 
@@ -102,25 +95,28 @@ int main() {
   // Deserialize
   // again attach the pointner staring positioni of the shared memory,
   // parse the content until the null terminated symbol.
-  char* shared_memory = (char*)shmat(shmid, NULL, 0);
-  // The first sizeof(int) bytes are used for keeping write offset for children
-  // processes to communicate.
-  char* ptr = shared_memory + sizeof(int);
   auto word_count = unordered_map<string, int>();
-  while (ptr < shared_memory + SHM_SIZE && *ptr != '\0') {
-    auto word_len = *((int*)ptr);
-    ptr += sizeof(int);
-    auto str = string(ptr, word_len);
-    ptr += word_len;
-    auto count = *((int*)ptr);
-    ptr += sizeof(int);
-    word_count[str] += count;
+  for (int i = 0; i < num_children; i++)  {
+    char* shared_memory = (char*)shmat(shmids[i], NULL, 0);
+    // The first sizeof(int) bytes are used for keeping write offset for children
+    // processes to communicate.
+    char* ptr = shared_memory;
+    while (ptr < shared_memory + SHM_SIZE && *ptr != '\0') {
+      auto word_len = *((int*)ptr);
+      ptr += sizeof(int);
+      auto str = string(ptr, word_len);
+      ptr += word_len;
+      auto count = *((int*)ptr);
+      ptr += sizeof(int);
+      word_count[str] += count;
+    }
   }
 
   // Cleanup
-  sem_close(sem);
-  sem_unlink(SEM_NAME);
-  shmctl(shmid, IPC_RMID, NULL);
+  // - shared memory
+  for (int i = 0; i < num_children; i++)  {
+    shmctl(shmids[i], IPC_RMID, NULL);
+  }
 
   // Sort the results and output to file
   auto output_file = string("../output/multi_process.txt");
