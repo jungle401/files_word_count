@@ -6,30 +6,49 @@
 #include <sys/shm.h>
 #include <sys/wait.h>
 #include <unistd.h>
-// #include <semaphore.h>
 #include <fcntl.h>
 #include <unordered_map>
 #include <vector>
 #include <cstring>
 #include <algorithm>
+#include <filesystem>
 
 #define SHM_SIZE 65536
 
 using namespace std;
+namespace fs = std::filesystem;
+size_t shm_size;
 
-vector<string> files =
-  {
-    "../essay/e1.txt",
-    "../essay/e2.txt",
-    "../essay/e3.txt",
-  };
+struct RangeReadFiles {
+  int start_file;
+  streampos start_pos;
+  int end_file;
+  streampos end_pos;
+};
 
-void child_process(int child_id, int shmid) {
+void child_process(
+  int child_id,
+  int shmid,
+  const vector<fs::path>& files,
+  const vector<RangeReadFiles>& ranges_read_file
+) {
   auto word_count = unordered_map<string, int>();
-  auto fin = ifstream(files[child_id]);
-  auto str = string();
-  while (fin >> str) {
-    word_count[str]++;
+  auto& rng = ranges_read_file[child_id];
+  for (int i = rng.start_file; i <= rng.end_file; i++) {
+    auto fin = ifstream(files[i]);
+    if (i == rng.start_file) {
+      fin.seekg(rng.start_pos);
+    }
+    auto str = string();
+    if (i < rng.end_file) {
+      while (fin >> str) {
+        word_count[str]++;
+      }
+    } else {
+      while (fin >> str && fin.tellg() < rng.end_pos) {
+        word_count[str]++;
+      }
+    }
   }
   // Serialiation
   // write into the shared memory
@@ -45,7 +64,7 @@ void child_process(int child_id, int shmid) {
   char* ptr = shared_memory;
   for (auto& [word, count] : word_count) {
     // see if the next word exceeds the effective memory
-    if (ptr + sizeof(word) + sizeof(int) * 2 >= shared_memory + SHM_SIZE) {
+    if (ptr + sizeof(word) + sizeof(int) * 2 >= shared_memory + shm_size) {
       perror("shm space limit exceeds\n");
       exit(-1);
     }
@@ -61,15 +80,72 @@ void child_process(int child_id, int shmid) {
   shmdt(shared_memory);
 }
 
+vector<filesystem::path> get_files(const fs::path& dir) {
+  auto res = vector<filesystem::path>();
+  for (auto& dir_entry : fs::recursive_directory_iterator(dir)) {
+    res.push_back(dir_entry.path());
+  }
+  return res;
+}
+
+std::streampos find_next_space(const fs::path& fname, std::streampos start) {
+  auto file = ifstream(fname);
+  file.seekg(start);
+  char ch;
+  while (file.get(ch)) {
+    if (ch == ' ') {
+      return file.tellg();
+    }
+  }
+  return file.tellg(); // Return end of file if no space is found
+}
+
+vector<RangeReadFiles> get_ranges_read_file(const vector<fs::path>& files, int num_children) {
+  auto res = vector<RangeReadFiles>();
+  auto total_size = 0;
+  for (const auto& f : files) {
+    total_size += fs::file_size(f);
+  }
+  auto seg_size = total_size / num_children;
+  shm_size = seg_size * 16;
+  auto acc_size = 0;
+  auto seg_iter = 1;
+  // Find cut point in linear
+  for (int i = 0; i < files.size(); i++) {
+    if (acc_size + file_size(files[i]) > seg_iter * seg_size) {
+      // find seg_iter * seg_size - acc_size;
+      // to target strea_pos within files[i]
+      auto offset = seg_iter * seg_size - acc_size;
+      auto pos = find_next_space(files[i], offset);
+      res.push_back(RangeReadFiles({0, 0, i, pos}));
+      seg_iter++;
+      if (seg_iter == num_children) {
+        auto last_index = int(files.size() - 1);
+        res.push_back({0, 0, last_index, fs::file_size(files[last_index])});
+        break;
+      }
+    }
+    acc_size += file_size(files[i]);
+  }
+  for (int i = 1; i < res.size(); i++) {
+    res[i].start_file = res[i - 1].end_file;
+    res[i].start_pos = res[i - 1].end_pos;
+  }
+  return res;
+}
+
 int main() {
 
   // Child Processes
-  auto num_children = 3;
+  auto num_children = 4;
+
+  auto files = get_files(fs::path("../data/essay"));
+  auto ranges_read_file = get_ranges_read_file(files, num_children);
 
   // Shared Memory for each sub-processes
   auto shmids = vector<int>(num_children);
   for (int i = 0; i < num_children; i++) {
-    shmids[i] = shmget(i, SHM_SIZE, 0666 | IPC_CREAT);
+    shmids[i] = shmget(i, shm_size, 0666 | IPC_CREAT);
     if (shmids[i] == -1) {
       perror("shmget");
       exit(EXIT_FAILURE);
@@ -80,7 +156,7 @@ int main() {
     pid_t pid = fork();
     if (pid == 0) {
       // child process
-      child_process(i, shmids[i]);
+      child_process(i, shmids[i], files, ranges_read_file);
       exit(0);
     } else if (pid < 0) {
       perror("fork()");
@@ -101,7 +177,7 @@ int main() {
     // The first sizeof(int) bytes are used for keeping write offset for children
     // processes to communicate.
     char* ptr = shared_memory;
-    while (ptr < shared_memory + SHM_SIZE && *ptr != '\0') {
+    while (ptr < shared_memory + shm_size && *ptr != '\0') {
       auto word_len = *((int*)ptr);
       ptr += sizeof(int);
       auto str = string(ptr, word_len);
