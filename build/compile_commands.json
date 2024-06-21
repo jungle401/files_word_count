@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build",
+  "command": "/Users/johnson/.local/state/nix/profile/bin/c++  -I/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/include -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/word_count.dir/src/main.cpp.o -c /Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/src/main.cpp",
+  "file": "/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/src/main.cpp",
+  "output": "CMakeFiles/word_count.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build",
+  "command": "/Users/johnson/.local/state/nix/profile/bin/c++  -I/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/include -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/server.dir/src/server.cpp.o -c /Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/src/server.cpp",
+  "file": "/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/src/server.cpp",
+  "output": "CMakeFiles/server.dir/src/server.cpp.o"
+},
+{
+  "directory": "/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build",
+  "command": "/Users/johnson/.local/state/nix/profile/bin/c++  -I/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/include -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -o CMakeFiles/client.dir/src/client.cpp.o -c /Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/src/client.cpp",
+  "file": "/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/src/client.cpp",
+  "output": "CMakeFiles/client.dir/src/client.cpp.o"
+}
+]

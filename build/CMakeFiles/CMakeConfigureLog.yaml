@@ -1,0 +1,601 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Darwin - 22.5.0 - arm64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /Users/johnson/.local/state/nix/profile/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/3.29.6/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /Users/johnson/.local/state/nix/profile/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/3.29.6/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-G1aoXL"
+      binary: "/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-G1aoXL"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-G1aoXL'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -E env VERBOSE=1 /Users/johnson/.local/state/nix/profile/bin/make -f Makefile cmTC_998a9/fast
+        /Users/johnson/.local/state/nix/profile/bin/make  -f CMakeFiles/cmTC_998a9.dir/build.make CMakeFiles/cmTC_998a9.dir/build
+        make[1]: Entering directory '/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-G1aoXL'
+        Building C object CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o
+        /Users/johnson/.local/state/nix/profile/bin/cc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk   -v -Wl,-v -o CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/bin/gcc
+        Target: aarch64-apple-darwin
+        Configured with: ../gcc-13.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.3.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libSystem-11.0.0/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0/include/c++/13.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c,c++,objc,obj-c++ --disable-multilib --enable-plugin --build=aarch64-apple-darwin --host=aarch64-apple-darwin --target=aarch64-apple-darwin
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0' '-asm_macosx_version_min=11.0' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_998a9.dir/'
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/cc1 -quiet -v -D__DYNAMIC__ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -idirafter /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include -idirafter /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed /opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeCCompilerABI.c -fPIC -quiet -dumpdir CMakeFiles/cmTC_998a9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mmacosx-version-min=11.0 -mlittle-endian -mabi=lp64 -version -o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccViSd2A.s
+        GNU C17 (GCC) version 13.2.0 (aarch64-apple-darwin)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../../aarch64-apple-darwin/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include"
+        ignoring duplicate directory "/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed
+         /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include
+        End of search list.
+        Compiler executable checksum: d15a91771ff3c45eb5b8e9cabd79eb24
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_998a9.dir/'
+         /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/as -arch arm64 -v -mmacosx-version-min=11.0 -o CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccViSd2A.s
+        clang version 16.0.6
+        Target: arm64-apple-darwin22.5.0
+        Thread model: posix
+        InstalledDir: /nix/store/09wcswiav8pc54w87r6vx1ylfgq4m2ah-clang-16.0.6/bin
+         (in-process)
+         "/nix/store/09wcswiav8pc54w87r6vx1ylfgq4m2ah-clang-16.0.6/bin/clang-16" -cc1as -triple arm64-apple-macosx11.0.0 -filetype obj -main-file-name ccViSd2A.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -fdebug-compilation-dir=/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-G1aoXL -dwarf-debug-producer "clang version 16.0.6" -dwarf-version=4 -mrelocation-model pic -o CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccViSd2A.s
+        COMPILER_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/
+        LIBRARY_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_998a9
+        /opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_998a9.dir/link.txt --verbose=1
+        /Users/johnson/.local/state/nix/profile/bin/cc  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o -o cmTC_998a9
+        Using built-in specs.
+        COLLECT_GCC=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/bin/gcc
+        COLLECT_LTO_WRAPPER=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/lto-wrapper
+        Target: aarch64-apple-darwin
+        Configured with: ../gcc-13.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.3.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libSystem-11.0.0/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0/include/c++/13.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c,c++,objc,obj-c++ --disable-multilib --enable-plugin --build=aarch64-apple-darwin --host=aarch64-apple-darwin --target=aarch64-apple-darwin
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        COMPILER_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/
+        LIBRARY_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'cmTC_998a9' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib' '-L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-mmacosx-version-min=11.0' '-asm_macosx_version_min=11.0' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_998a9.'
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/collect2 -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -platform_version macos 11.0 0.0 -o cmTC_998a9 -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o -arch arm64 -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -rpath /nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -rpath /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib
+        collect2 version 13.2.0
+        /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/ld -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -platform_version macos 11.0 0.0 -o cmTC_998a9 -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o -arch arm64 -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -rpath /nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -rpath /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib
+        @(#)PROGRAM:ld  PROJECT:ld64-609
+        BUILD 00:00:00 Jan  1 1980
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+        	/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib
+        	/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib
+        	/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib
+        	/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib
+        	/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin
+        	/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0
+        	/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib
+        Framework search paths:
+        make[1]: Leaving directory '/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-G1aoXL'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:137 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include]
+          add: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include]
+          add: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed]
+          add: [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include]
+        end of search list found
+        collapse include dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include]
+        collapse include dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include]
+        collapse include dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed]
+        collapse include dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include] ==> [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include]
+        implicit include dirs: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed;/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-G1aoXL']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -E env VERBOSE=1 /Users/johnson/.local/state/nix/profile/bin/make -f Makefile cmTC_998a9/fast]
+        ignore line: [/Users/johnson/.local/state/nix/profile/bin/make  -f CMakeFiles/cmTC_998a9.dir/build.make CMakeFiles/cmTC_998a9.dir/build]
+        ignore line: [make[1]: Entering directory '/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-G1aoXL']
+        ignore line: [Building C object CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/Users/johnson/.local/state/nix/profile/bin/cc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk   -v -Wl -v -o CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/bin/gcc]
+        ignore line: [Target: aarch64-apple-darwin]
+        ignore line: [Configured with: ../gcc-13.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.3.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libSystem-11.0.0/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0/include/c++/13.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c c++ objc obj-c++ --disable-multilib --enable-plugin --build=aarch64-apple-darwin --host=aarch64-apple-darwin --target=aarch64-apple-darwin]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0' '-asm_macosx_version_min=11.0' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_998a9.dir/']
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/cc1 -quiet -v -D__DYNAMIC__ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -idirafter /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include -idirafter /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed /opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeCCompilerABI.c -fPIC -quiet -dumpdir CMakeFiles/cmTC_998a9.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mmacosx-version-min=11.0 -mlittle-endian -mabi=lp64 -version -o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccViSd2A.s]
+        ignore line: [GNU C17 (GCC) version 13.2.0 (aarch64-apple-darwin)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../../aarch64-apple-darwin/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include"]
+        ignore line: [ignoring duplicate directory "/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include]
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include]
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed]
+        ignore line: [ /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: d15a91771ff3c45eb5b8e9cabd79eb24]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_998a9.dir/']
+        ignore line: [ /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/as -arch arm64 -v -mmacosx-version-min=11.0 -o CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccViSd2A.s]
+        ignore line: [clang version 16.0.6]
+        ignore line: [Target: arm64-apple-darwin22.5.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /nix/store/09wcswiav8pc54w87r6vx1ylfgq4m2ah-clang-16.0.6/bin]
+        ignore line: [ (in-process)]
+        ignore line: [ "/nix/store/09wcswiav8pc54w87r6vx1ylfgq4m2ah-clang-16.0.6/bin/clang-16" -cc1as -triple arm64-apple-macosx11.0.0 -filetype obj -main-file-name ccViSd2A.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -fdebug-compilation-dir=/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-G1aoXL -dwarf-debug-producer "clang version 16.0.6" -dwarf-version=4 -mrelocation-model pic -o CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccViSd2A.s]
+        ignore line: [COMPILER_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/]
+        ignore line: [LIBRARY_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_998a9]
+        ignore line: [/opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_998a9.dir/link.txt --verbose=1]
+        ignore line: [/Users/johnson/.local/state/nix/profile/bin/cc  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o -o cmTC_998a9]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/bin/gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/lto-wrapper]
+        ignore line: [Target: aarch64-apple-darwin]
+        ignore line: [Configured with: ../gcc-13.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.3.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libSystem-11.0.0/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0/include/c++/13.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c c++ objc obj-c++ --disable-multilib --enable-plugin --build=aarch64-apple-darwin --host=aarch64-apple-darwin --target=aarch64-apple-darwin]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/]
+        ignore line: [LIBRARY_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'cmTC_998a9' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib' '-L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-mmacosx-version-min=11.0' '-asm_macosx_version_min=11.0' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_998a9.']
+        link line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/collect2 -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -platform_version macos 11.0 0.0 -o cmTC_998a9 -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o -arch arm64 -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -rpath /nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -rpath /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+          arg [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/collect2] ==> ignore
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [11.0] ==> ignore
+          arg [0.0] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_998a9] ==> ignore
+          arg [-L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+          arg [-L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+          arg [-L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+          arg [-L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+          arg [-L/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin] ==> dir [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin]
+          arg [-L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0] ==> dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0]
+          arg [-L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../..] ==> dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../..]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-lemutls_w] ==> lib [emutls_w]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lSystem] ==> lib [System]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-no_compact_unwind] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [@loader_path] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib] ==> ignore
+        ignore line: [collect2 version 13.2.0]
+        ignore line: [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/ld -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -platform_version macos 11.0 0.0 -o cmTC_998a9 -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_998a9.dir/CMakeCCompilerABI.c.o -arch arm64 -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -rpath /nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -rpath /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+        linker tool for 'C': /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/ld
+        Library search paths: [;/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib;/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib;/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib;/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib;/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+        remove lib [System]
+        collapse library dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+        collapse library dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+        collapse library dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+        collapse library dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+        collapse library dir [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin] ==> [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin]
+        collapse library dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0]
+        collapse library dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../..] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+        collapse library dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+        collapse library dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+        collapse library dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+        collapse library dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+        collapse library dir [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin] ==> [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin]
+        collapse library dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0]
+        collapse library dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+        implicit libs: [emutls_w;gcc;gcc]
+        implicit objs: []
+        implicit dirs: [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib;/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib;/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/ld" "-v"
+      @(#)PROGRAM:ld  PROJECT:ld64-609
+      BUILD 00:00:00 Jan  1 1980
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+      Library search paths:
+      	/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib
+      Framework search paths:
+      ld: no object files specified
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-LrT9Xw"
+      binary: "/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-LrT9Xw"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-LrT9Xw'
+        
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -E env VERBOSE=1 /Users/johnson/.local/state/nix/profile/bin/make -f Makefile cmTC_b666a/fast
+        /Users/johnson/.local/state/nix/profile/bin/make  -f CMakeFiles/cmTC_b666a.dir/build.make CMakeFiles/cmTC_b666a.dir/build
+        make[1]: Entering directory '/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-LrT9Xw'
+        Building CXX object CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o
+        /Users/johnson/.local/state/nix/profile/bin/c++   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk   -v -Wl,-v -o CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/bin/g++
+        Target: aarch64-apple-darwin
+        Configured with: ../gcc-13.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.3.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libSystem-11.0.0/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0/include/c++/13.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c,c++,objc,obj-c++ --disable-multilib --enable-plugin --build=aarch64-apple-darwin --host=aarch64-apple-darwin --target=aarch64-apple-darwin
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0' '-asm_macosx_version_min=11.0' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b666a.dir/'
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/cc1plus -quiet -v -D__DYNAMIC__ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -idirafter /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include -idirafter /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed /opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeCXXCompilerABI.cpp -fPIC -quiet -dumpdir CMakeFiles/cmTC_b666a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mmacosx-version-min=11.0 -mlittle-endian -mabi=lp64 -version -o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccnLyDd1.s
+        GNU C++17 (GCC) version 13.2.0 (aarch64-apple-darwin)
+        	compiled by GNU C version 13.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../../aarch64-apple-darwin/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include"
+        ignoring duplicate directory "/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0/
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0//aarch64-apple-darwin
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0//backward
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed
+         /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include
+        End of search list.
+        Compiler executable checksum: c218239d1be41fe2910728bdab9d41fb
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b666a.dir/'
+         /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/as -arch arm64 -v -mmacosx-version-min=11.0 -o CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccnLyDd1.s
+        clang version 16.0.6
+        Target: arm64-apple-darwin22.5.0
+        Thread model: posix
+        InstalledDir: /nix/store/09wcswiav8pc54w87r6vx1ylfgq4m2ah-clang-16.0.6/bin
+         (in-process)
+         "/nix/store/09wcswiav8pc54w87r6vx1ylfgq4m2ah-clang-16.0.6/bin/clang-16" -cc1as -triple arm64-apple-macosx11.0.0 -filetype obj -main-file-name ccnLyDd1.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -fdebug-compilation-dir=/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-LrT9Xw -dwarf-debug-producer "clang version 16.0.6" -dwarf-version=4 -mrelocation-model pic -o CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccnLyDd1.s
+        COMPILER_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/
+        LIBRARY_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_b666a
+        /opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b666a.dir/link.txt --verbose=1
+        /Users/johnson/.local/state/nix/profile/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b666a
+        Using built-in specs.
+        COLLECT_GCC=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/bin/g++
+        COLLECT_LTO_WRAPPER=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/lto-wrapper
+        Target: aarch64-apple-darwin
+        Configured with: ../gcc-13.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.3.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libSystem-11.0.0/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0/include/c++/13.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c,c++,objc,obj-c++ --disable-multilib --enable-plugin --build=aarch64-apple-darwin --host=aarch64-apple-darwin --target=aarch64-apple-darwin
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.2.0 (GCC) 
+        COMPILER_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/
+        LIBRARY_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../
+        COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'cmTC_b666a' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib' '-L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-mmacosx-version-min=11.0' '-asm_macosx_version_min=11.0' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_b666a.'
+         /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/collect2 -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -platform_version macos 11.0 0.0 -o cmTC_b666a -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o -arch arm64 -lstdc++ -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -rpath /nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -rpath /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib
+        collect2 version 13.2.0
+        /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/ld -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -platform_version macos 11.0 0.0 -o cmTC_b666a -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o -arch arm64 -lstdc++ -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -rpath /nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -rpath /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib
+        @(#)PROGRAM:ld  PROJECT:ld64-609
+        BUILD 00:00:00 Jan  1 1980
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+        	/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib
+        	/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib
+        	/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib
+        	/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib
+        	/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin
+        	/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0
+        	/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib
+        Framework search paths:
+        make[1]: Leaving directory '/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-LrT9Xw'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:137 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0/]
+          add: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0//aarch64-apple-darwin]
+          add: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0//backward]
+          add: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include]
+          add: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include]
+          add: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed]
+          add: [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include]
+        end of search list found
+        collapse include dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0/] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0]
+        collapse include dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0//aarch64-apple-darwin] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0/aarch64-apple-darwin]
+        collapse include dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0//backward] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0/backward]
+        collapse include dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include]
+        collapse include dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include]
+        collapse include dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed]
+        collapse include dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include] ==> [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include]
+        implicit include dirs: [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0/aarch64-apple-darwin;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0/backward;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed;/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-LrT9Xw']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -E env VERBOSE=1 /Users/johnson/.local/state/nix/profile/bin/make -f Makefile cmTC_b666a/fast]
+        ignore line: [/Users/johnson/.local/state/nix/profile/bin/make  -f CMakeFiles/cmTC_b666a.dir/build.make CMakeFiles/cmTC_b666a.dir/build]
+        ignore line: [make[1]: Entering directory '/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-LrT9Xw']
+        ignore line: [Building CXX object CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/Users/johnson/.local/state/nix/profile/bin/c++   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk   -v -Wl -v -o CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/bin/g++]
+        ignore line: [Target: aarch64-apple-darwin]
+        ignore line: [Configured with: ../gcc-13.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.3.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libSystem-11.0.0/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0/include/c++/13.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c c++ objc obj-c++ --disable-multilib --enable-plugin --build=aarch64-apple-darwin --host=aarch64-apple-darwin --target=aarch64-apple-darwin]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0' '-asm_macosx_version_min=11.0' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b666a.dir/']
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/cc1plus -quiet -v -D__DYNAMIC__ -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -idirafter /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include -idirafter /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed /opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeCXXCompilerABI.cpp -fPIC -quiet -dumpdir CMakeFiles/cmTC_b666a.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mmacosx-version-min=11.0 -mlittle-endian -mabi=lp64 -version -o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccnLyDd1.s]
+        ignore line: [GNU C++17 (GCC) version 13.2.0 (aarch64-apple-darwin)]
+        ignore line: [	compiled by GNU C version 13.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../../aarch64-apple-darwin/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include"]
+        ignore line: [ignoring duplicate directory "/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0/]
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0//aarch64-apple-darwin]
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include/c++/13.2.0//backward]
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include]
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/include]
+        ignore line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed]
+        ignore line: [ /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: c218239d1be41fe2910728bdab9d41fb]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b666a.dir/']
+        ignore line: [ /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/as -arch arm64 -v -mmacosx-version-min=11.0 -o CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccnLyDd1.s]
+        ignore line: [clang version 16.0.6]
+        ignore line: [Target: arm64-apple-darwin22.5.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /nix/store/09wcswiav8pc54w87r6vx1ylfgq4m2ah-clang-16.0.6/bin]
+        ignore line: [ (in-process)]
+        ignore line: [ "/nix/store/09wcswiav8pc54w87r6vx1ylfgq4m2ah-clang-16.0.6/bin/clang-16" -cc1as -triple arm64-apple-macosx11.0.0 -filetype obj -main-file-name ccnLyDd1.s -target-cpu apple-m1 -target-feature +v8.5a -target-feature +crc -target-feature +crypto -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-feature +sm4 -target-feature +sha3 -target-feature +sha2 -target-feature +aes -fdebug-compilation-dir=/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/CMakeScratch/TryCompile-LrT9Xw -dwarf-debug-producer "clang version 16.0.6" -dwarf-version=4 -mrelocation-model pic -o CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o /var/folders/zp/hjkxfb6d3rzc504p4c2v539h0000gn/T//ccnLyDd1.s]
+        ignore line: [COMPILER_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/]
+        ignore line: [LIBRARY_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-mmacosx-version-min=11.0'  '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_b666a]
+        ignore line: [/opt/homebrew/Cellar/cmake/3.29.6/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b666a.dir/link.txt --verbose=1]
+        ignore line: [/Users/johnson/.local/state/nix/profile/bin/c++  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names  -v -Wl -v CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_b666a]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/bin/g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/lto-wrapper]
+        ignore line: [Target: aarch64-apple-darwin]
+        ignore line: [Configured with: ../gcc-13.2.0/configure --prefix=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0 --with-gmp-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0-dev/include --with-gmp-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gmp-with-cxx-6.3.0/lib --with-mpfr-include=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1-dev/include --with-mpfr-lib=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-mpfr-4.2.1/lib --with-mpc=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libmpc-1.3.1 --with-native-system-header-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-libSystem-11.0.0/include --with-build-sysroot=/ --with-gxx-include-dir=/nix/store/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-gcc-13.2.0/include/c++/13.2.0/ --program-prefix= --enable-lto --disable-libstdcxx-pch --without-included-gettext --with-system-zlib --enable-static --enable-languages=c c++ objc obj-c++ --disable-multilib --enable-plugin --build=aarch64-apple-darwin --host=aarch64-apple-darwin --target=aarch64-apple-darwin]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.2.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/]
+        ignore line: [LIBRARY_PATH=/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/:/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib/:/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/:/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-isysroot' '/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk' '-v' '-o' 'cmTC_b666a' '-B' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib/' '-idirafter' '/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/include' '-idirafter' '/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/include-fixed' '-B' '/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-B' '/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/' '-L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib' '-L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib' '-mmacosx-version-min=11.0' '-asm_macosx_version_min=11.0' '-nodefaultexport' '-mlittle-endian' '-mabi=lp64' '-dumpdir' 'cmTC_b666a.']
+        link line: [ /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/collect2 -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -platform_version macos 11.0 0.0 -o cmTC_b666a -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o -arch arm64 -lstdc++ -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -rpath /nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -rpath /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+          arg [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/libexec/gcc/aarch64-apple-darwin/13.2.0/collect2] ==> ignore
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [11.0] ==> ignore
+          arg [0.0] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_b666a] ==> ignore
+          arg [-L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+          arg [-L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+          arg [-L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+          arg [-L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+          arg [-L/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin] ==> dir [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin]
+          arg [-L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0] ==> dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0]
+          arg [-L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../..] ==> dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../..]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-arch] ==> ignore
+          arg [arm64] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lemutls_w] ==> lib [emutls_w]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lSystem] ==> lib [System]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-no_compact_unwind] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [@loader_path] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib] ==> ignore
+        ignore line: [collect2 version 13.2.0]
+        ignore line: [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/ld -dynamic -arch arm64 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -platform_version macos 11.0 0.0 -o cmTC_b666a -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -L/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -L/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -L/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../.. -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_b666a.dir/CMakeCXXCompilerABI.cpp.o -arch arm64 -lstdc++ -lemutls_w -lgcc -lSystem -lgcc -no_compact_unwind -rpath @loader_path -rpath /nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib -rpath /nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib -rpath /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0 -rpath /nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+        linker tool for 'CXX': /nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/ld
+        Library search paths: [;/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib;/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib;/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib;/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib;/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+        remove lib [System]
+        collapse library dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+        collapse library dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+        collapse library dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+        collapse library dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+        collapse library dir [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin] ==> [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin]
+        collapse library dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0]
+        collapse library dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0/../../..] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+        collapse library dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+        collapse library dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+        collapse library dir [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib] ==> [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib]
+        collapse library dir [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib] ==> [/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib]
+        collapse library dir [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin] ==> [/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin]
+        collapse library dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0]
+        collapse library dir [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib] ==> [/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+        implicit libs: [stdc++;emutls_w;gcc;gcc]
+        implicit objs: []
+        implicit dirs: [/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib;/nix/store/idk54d3gjab8lsnn5qg11n4l53c14k4x-gcc-13.2.0-lib/lib;/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib/gcc/aarch64-apple-darwin/13.2.0;/nix/store/3zpcw8jcgn9vax9pq23rxdwny2z3j4n8-gcc-13.2.0/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "/opt/homebrew/Cellar/cmake/3.29.6/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "/nix/store/bwcwdgfr3831h4lrh6cfd58bx3x4mk9f-gcc-wrapper-13.2.0/bin/ld" "-v"
+      @(#)PROGRAM:ld  PROJECT:ld64-609
+      BUILD 00:00:00 Jan  1 1980
+      configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+      Library search paths:
+      	/nix/store/21rgqylgwrms6xzqdf9ggs1wdljh1sqx-libSystem-11.0.0/lib
+      Framework search paths:
+      ld: no object files specified
+...

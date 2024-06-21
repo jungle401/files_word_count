@@ -13,7 +13,7 @@
 #include <algorithm>
 #include <filesystem>
 
-#define SHM_SIZE 65536
+#include <config.h>
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -53,7 +53,6 @@ void child_process(
   // Serialiation
   // write into the shared memory
   // Attach, to get the pointer to the address of the shared memory.
-
   char* shared_memory = (char*)shmat(shmid, NULL, 0);
   if (shared_memory == (char*)(-1)) {
     perror("shmat");
@@ -78,14 +77,6 @@ void child_process(
   }
   *ptr = '\0';
   shmdt(shared_memory);
-}
-
-vector<filesystem::path> get_files(const fs::path& dir) {
-  auto res = vector<filesystem::path>();
-  for (auto& dir_entry : fs::recursive_directory_iterator(dir)) {
-    res.push_back(dir_entry.path());
-  }
-  return res;
 }
 
 std::streampos find_next_space(const fs::path& fname, std::streampos start) {
@@ -134,15 +125,21 @@ vector<RangeReadFiles> get_ranges_read_file(const vector<fs::path>& files, int n
   return res;
 }
 
-int main() {
+int main(int argc, char** argv) {
 
-  // Child Processes
-  auto num_children = 4;
+  // Number of sub-processes
+  auto num_children = stoi(argv[argc - 1]);
 
-  auto files = get_files(fs::path("../data/essay"));
+  // Input files
+  auto files = vector<fs::path>();
+  for (int i = 1; i < argc - 1; i++) {
+    files.push_back(fs::path(argv[i]));
+  }
+
+  // Divide raed file ranges for child processes to read evenly.
   auto ranges_read_file = get_ranges_read_file(files, num_children);
 
-  // Shared Memory for each sub-processes
+  // Get the vector of id of shared memory for each sub-processes
   auto shmids = vector<int>(num_children);
   for (int i = 0; i < num_children; i++) {
     shmids[i] = shmget(i, shm_size, 0666 | IPC_CREAT);
@@ -152,6 +149,7 @@ int main() {
     }
   }
 
+  // Fork sub-processes
   for (int i = 0; i < num_children; i++) {
     pid_t pid = fork();
     if (pid == 0) {
@@ -164,18 +162,15 @@ int main() {
     }
   }
 
+  // Join sub-processes
   for (int i = 0; i < num_children; i++) {
     wait(NULL);
   }
 
-  // Deserialize
-  // again attach the pointner staring positioni of the shared memory,
-  // parse the content until the null terminated symbol.
+  // Deserialize from shared memory and merge into the final word count map.
   auto word_count = unordered_map<string, int>();
   for (int i = 0; i < num_children; i++)  {
     char* shared_memory = (char*)shmat(shmids[i], NULL, 0);
-    // The first sizeof(int) bytes are used for keeping write offset for children
-    // processes to communicate.
     char* ptr = shared_memory;
     while (ptr < shared_memory + shm_size && *ptr != '\0') {
       auto word_len = *((int*)ptr);
@@ -188,14 +183,19 @@ int main() {
     }
   }
 
-  // Cleanup
-  // - shared memory
+  // Cleanup shared memory
   for (int i = 0; i < num_children; i++)  {
     shmctl(shmids[i], IPC_RMID, NULL);
   }
 
-  // Sort the results and output to file
-  auto output_file = string("../output/multi_process.txt");
+  for (auto& [word, count] : word_count) {
+    cout << word << '\t';
+    cout << count << '\n';
+  }
+  exit(0);
+
+  // Sort the results and output to file. This is for self-defined correctness verification.
+  auto output_file = string(REPO_PATH) + "/output/word_counts.txt";
   auto v = vector<pair<string, int>>();
   for (auto& [word, count] : word_count) {
     v.push_back({word, count});

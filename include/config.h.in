@@ -1,0 +1,4 @@
+// config.h.in
+#pragma once
+
+#define REPO_PATH "@CMAKE_SOURCE_DIR@"

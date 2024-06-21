@@ -1,0 +1,5 @@
+/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/word_count.dir
+/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/server.dir
+/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/client.dir
+/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/edit_cache.dir
+/Users/johnson/Desktop/others/code/synologys_quiz/code/ver1/build/CMakeFiles/rebuild_cache.dir
