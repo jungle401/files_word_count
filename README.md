@@ -22,3 +22,4 @@ make -j
 ```
 
 And the word count would be output on the server side.
+![Example Image](other/demo.png)
