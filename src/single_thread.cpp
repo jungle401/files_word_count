@@ -5,11 +5,14 @@
 #include <unordered_map>
 #include <algorithm>
 
+#include <config.h>
+
 using namespace std;
 
 int main() {
   auto m = unordered_map<string, int>();
-  for (auto& dir_entry : filesystem::recursive_directory_iterator("../data/essay/")) {
+  auto data_path = filesystem::path(REPO_PATH) / "directory_big/";
+  for (auto& dir_entry : filesystem::recursive_directory_iterator(data_path)) {
     auto fin = ifstream(dir_entry.path());
     auto str = string();
     while (fin >> str) {
@@ -22,7 +25,8 @@ int main() {
     v.push_back({word, count});
   }
   sort(v.begin(), v.end());
-  auto fout = ofstream("../output/single_process.txt");
+  auto out_path = filesystem::path(REPO_PATH) / "output/single_process.txt";
+  auto fout = ofstream(out_path);
   for (auto& [word, count] : v) {
     fout << word << '\t';
     fout << count << '\n';

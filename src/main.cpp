@@ -32,6 +32,9 @@ void child_process(
   const vector<fs::path>& files,
   const vector<RangeReadFiles>& ranges_read_file
 ) {
+  // Timing start
+  auto start = std::chrono::steady_clock::now();
+
   auto word_count = unordered_map<string, int>();
   auto& rng = ranges_read_file[child_id];
   for (int i = rng.start_file; i <= rng.end_file; i++) {
@@ -77,6 +80,11 @@ void child_process(
   }
   *ptr = '\0';
   shmdt(shared_memory);
+
+  // Timing End
+  auto end = std::chrono::steady_clock::now();
+  auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+  cout << "Child process " << getpid() << " completed in " << duration << " milliseconds" << endl;
 }
 
 std::streampos find_next_space(const fs::path& fname, std::streampos start) {
@@ -98,26 +106,19 @@ vector<RangeReadFiles> get_ranges_read_file(const vector<fs::path>& files, int n
     total_size += fs::file_size(f);
   }
   auto seg_size = total_size / num_children;
-  shm_size = seg_size * 16;
+  shm_size = seg_size * 4;
   auto acc_size = 0;
-  auto seg_iter = 1;
-  // Find cut point in linear
-  for (int i = 0; i < files.size(); i++) {
-    if (acc_size + file_size(files[i]) > seg_iter * seg_size) {
-      // find seg_iter * seg_size - acc_size;
-      // to target strea_pos within files[i]
-      auto offset = seg_iter * seg_size - acc_size;
-      auto pos = find_next_space(files[i], offset);
-      res.push_back(RangeReadFiles({0, 0, i, pos}));
-      seg_iter++;
-      if (seg_iter == num_children) {
-        auto last_index = int(files.size() - 1);
-        res.push_back({0, 0, last_index, fs::file_size(files[last_index])});
-        break;
-      }
+  // Find cut points
+  auto f = 0;
+  for (int i = 1; i < num_children; i++) {
+    while (acc_size + fs::file_size(files[f]) < seg_size * i) {
+      acc_size += fs::file_size(files[f]);
+      f++;
     }
-    acc_size += file_size(files[i]);
+    auto end_stream_pos = find_next_space(files[f], seg_size * i - acc_size);
+    res.push_back(RangeReadFiles{0, 0, f, end_stream_pos});
   }
+  res.push_back(RangeReadFiles{0, 0, int(files.size() - 1), fs::file_size(files[files.size() - 1])});
   for (int i = 1; i < res.size(); i++) {
     res[i].start_file = res[i - 1].end_file;
     res[i].start_pos = res[i - 1].end_pos;
@@ -132,12 +133,30 @@ int main(int argc, char** argv) {
 
   // Input files
   auto files = vector<fs::path>();
-  for (int i = 1; i < argc - 1; i++) {
-    files.push_back(fs::path(argv[i]));
+  // for (int i = 1; i < argc - 1; i++) {
+  //   files.push_back(fs::path(argv[i]));
+  // }
+  auto data_path = fs::path(REPO_PATH) / "directory_big";
+  for (auto& dir_entry : fs::recursive_directory_iterator(data_path)) {
+    if (fs::is_regular_file(dir_entry)) {
+      files.push_back(dir_entry);
+    }
   }
 
   // Divide raed file ranges for child processes to read evenly.
   auto ranges_read_file = get_ranges_read_file(files, num_children);
+  cout << "start_file" << '\t';
+  cout << "start_pos" << '\t';
+  cout << "end_file" << '\t';
+  cout << "end_pos" << '\n';
+  for (auto& i : ranges_read_file) {
+    cout << i.start_file << '\t';
+    cout << i.start_pos << '\t';
+    cout << i.end_file << '\t';
+    cout << i.end_pos << '\n';
+  }
+  cout << "shm_size" << '\t';
+  cout << shm_size << '\n';
 
   // Get the vector of id of shared memory for each sub-processes
   auto shmids = vector<int>(num_children);
@@ -188,11 +207,11 @@ int main(int argc, char** argv) {
     shmctl(shmids[i], IPC_RMID, NULL);
   }
 
-  for (auto& [word, count] : word_count) {
-    cout << word << '\t';
-    cout << count << '\n';
-  }
-  exit(0);
+  // for (auto& [word, count] : word_count) {
+  //   cout << word << '\t';
+  //   cout << count << '\n';
+  // }
+  // exit(0);
 
   // Sort the results and output to file. This is for self-defined correctness verification.
   auto output_file = string(REPO_PATH) + "/output/word_counts.txt";
