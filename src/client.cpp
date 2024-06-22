@@ -13,12 +13,16 @@ namespace fs = filesystem;
 
 vector<filesystem::path> get_files_since(const fs::path& dir, time_t t) {
   auto res = vector<filesystem::path>();
+  cout << "file_name" << '\t';
+  cout << "file_timestamp" << '\n';
   for (auto& dir_entry : fs::recursive_directory_iterator(dir)) {
     // Convert file time to system time
     auto ftime = fs::last_write_time(dir_entry.path());
     auto sctp = decltype(ftime)::clock::to_sys(ftime);
     std::time_t file_timestamp = std::chrono::system_clock::to_time_t(sctp);
     if (file_timestamp >= t && fs::is_regular_file(dir_entry)) {
+      cout << dir_entry.path().filename() << '\t';
+      cout << file_timestamp << '\n';
       res.push_back(dir_entry.path());
     }
   }

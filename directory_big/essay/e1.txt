@@ -1,14 +1,10 @@
-Question: 
+Question:
 
 What do you know about Synology?
 
 Chatgpt:
 
 Synology is a well-known Taiwanese company that specializes in network-attached storage (NAS) devices, which are popular for both home and business use. Founded in 2000 by Philip Wong and Cheen Liao, Synology has grown to become a significant player in the storage solutions market. Here are some key aspects of Synology:
-
-Key Products and Services
-Network-Attached Storage (NAS):
-
 DiskStation: Synology's line of NAS devices designed for home and small business users. These devices provide centralized storage, file sharing, data backup, and media streaming capabilities.
 RackStation: A range of rack-mounted NAS solutions tailored for larger businesses and enterprise environments. They offer higher storage capacities, redundancy features, and enhanced performance.
 Operating System:

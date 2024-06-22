@@ -133,30 +133,18 @@ int main(int argc, char** argv) {
 
   // Input files
   auto files = vector<fs::path>();
-  // for (int i = 1; i < argc - 1; i++) {
-  //   files.push_back(fs::path(argv[i]));
-  // }
-  auto data_path = fs::path(REPO_PATH) / "directory_big";
-  for (auto& dir_entry : fs::recursive_directory_iterator(data_path)) {
-    if (fs::is_regular_file(dir_entry)) {
-      files.push_back(dir_entry);
-    }
+  for (int i = 1; i < argc - 1; i++) {
+    files.push_back(fs::path(argv[i]));
   }
+  // auto data_path = fs::path(REPO_PATH) / "directory_big";
+  // for (auto& dir_entry : fs::recursive_directory_iterator(data_path)) {
+  //   if (fs::is_regular_file(dir_entry)) {
+  //     files.push_back(dir_entry);
+  //   }
+  // }
 
   // Divide raed file ranges for child processes to read evenly.
   auto ranges_read_file = get_ranges_read_file(files, num_children);
-  cout << "start_file" << '\t';
-  cout << "start_pos" << '\t';
-  cout << "end_file" << '\t';
-  cout << "end_pos" << '\n';
-  for (auto& i : ranges_read_file) {
-    cout << i.start_file << '\t';
-    cout << i.start_pos << '\t';
-    cout << i.end_file << '\t';
-    cout << i.end_pos << '\n';
-  }
-  cout << "shm_size" << '\t';
-  cout << shm_size << '\n';
 
   // Get the vector of id of shared memory for each sub-processes
   auto shmids = vector<int>(num_children);
@@ -207,11 +195,11 @@ int main(int argc, char** argv) {
     shmctl(shmids[i], IPC_RMID, NULL);
   }
 
-  // for (auto& [word, count] : word_count) {
-  //   cout << word << '\t';
-  //   cout << count << '\n';
-  // }
-  // exit(0);
+  for (auto& [word, count] : word_count) {
+    cout << word << '\t';
+    cout << count << '\n';
+  }
+  exit(0);
 
   // Sort the results and output to file. This is for self-defined correctness verification.
   auto output_file = string(REPO_PATH) + "/output/word_counts.txt";
