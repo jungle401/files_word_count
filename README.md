@@ -16,7 +16,7 @@ make -j
 ```
 
 ```
-// under PROJECT_SOURCE_DIRECTORY, tty1
+// under PROJECT_SOURCE_DIRECTORY, tty2
 // Target files whose last_write_time is 1718897720
 ./build/client 1718897720
 ```
