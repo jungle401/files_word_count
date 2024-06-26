@@ -195,6 +195,7 @@ int main(int argc, char** argv) {
     shmctl(shmids[i], IPC_RMID, NULL);
   }
 
+  // Output response
   for (auto& [word, count] : word_count) {
     cout << word << '\t';
     cout << count << '\n';
